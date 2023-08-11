@@ -2,9 +2,12 @@
 const express = require("express");
 const app = express();
 const routes = require("./routes");
+const cors = require("cors");
 
 // Parse JSON request bodies
 app.use(express.json());
+
+app.use(cors());
 
 // Port on which the server listens
 const port = 3004;
