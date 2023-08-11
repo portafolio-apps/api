@@ -7,7 +7,7 @@ const routes = require("./routes");
 app.use(express.json());
 
 // Port on which the server listens
-const port = 3003;
+const port = 3004;
 
 // Start the server
 app.listen(port, () => {
