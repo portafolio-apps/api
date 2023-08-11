@@ -2,6 +2,6 @@
 const express = require("express");
 const router = express.Router();
 
-router.use("/miembros", require("./miembros"));
+router.use("/members", require("./members"));
 
 module.exports = router;

@@ -22,18 +22,18 @@ router.get("/", async (req, res) => {
         const data = await response.json(); // Parsea la respuesta como JSON
 
         const toReturn = data.items.map(member => ({
-            tag: member.tag,
-            nombre: member.name,
-            trofeos: member.trophies,
+            // tag: member.tag,
+            name: member.name,
+            trophies: member.trophies,
             color: member.nameColor,
-            imagen: "https://cdn.brawlstats.com/player-thumbnails/" + member.icon.id + ".png"
+            img: "https://cdn.brawlstats.com/player-thumbnails/" + member.icon.id + ".png"
 
         }));
 
         res.status(200).json(toReturn); // Envía el JSON como respuesta
     } catch (error) {
         console.error('Error:', error);
-        res.status(500).json({ error: 'An error occurred' }); // Envía una respuesta de error al cliente
+        res.status(500).json({ error: 'An error occurred' });
     }
 });
 

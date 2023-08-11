@@ -16,7 +16,7 @@ app.listen(port, () => {
 
 // Welcome route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to the main page" });
+  res.json({ message: "Welcome to the main page of Tribal Gaming API" });
 });
 
 // Routes
