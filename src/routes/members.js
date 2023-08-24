@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
         const data = await response.json(); // Parsea la respuesta como JSON
 
         const toReturn = data.items.map(member => ({
-            // tag: member.tag,
+            tag: member.tag,
             name: member.name,
             trophies: member.trophies,
             color: member.nameColor,
